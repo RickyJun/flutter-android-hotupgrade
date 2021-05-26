@@ -26,9 +26,8 @@ class HotfixUtil {
     String file =
         (await getExternalStorageDirectory()).path + "/" + "libapp_fix.so";
     Completer downFinish = Completer();
-    DioUtil.getInstance().download(
-        "https://raw.githubusercontent.com/RickyJun/test/master/libapp_fix.so",
-        file, onProgress: (current, max) {
+    DioUtil.getInstance().download("https:xxxxx/libapp_fix.so", file,
+        onProgress: (current, max) {
       if (current == max) {
         downFinish.complete(true);
       }
